@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr" class="page-animate">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parcoursup 2026</title>
+  <link rel="icon" type="image/png" href="parcoursup.png">
+  <link rel="stylesheet" href="parcoursup.css">
+</head>
+<body>
+<header>
+  <h1>Parcoursup 2026</h1>
+  <nav>
+    <button data-tab="entreprises">📚 Apprentissage</button>
+    <button data-tab="voeux">🎓 Mes vœux</button>
+  </nav>
+</header>
+<main>
+  <section id="entreprises" class="tab active">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <h2>🏢 Entreprises</h2>
+      <span id="compteur-entreprises" style="background: #1d3557; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 1.1rem; font-weight: bold;"></span>
+    </div>
+    <div id="layout">
+      <div id="liste-colonne">
+        <div id="recherche-entreprise-wrapper">
+          <input type="text" id="recherche-entreprise" placeholder="Rechercher une entreprise...">
+          <button id="recherche-clear" aria-label="Effacer la recherche">&#x2715;</button>
+        </div>
+        <ul id="liste-entreprises"></ul>
+      </div>
+      <div id="fiche">☑️ Sélectionne une entreprise</div>
+    </div>
+  </section>
+  <section id="entretiens" class="tab-renvois" style="margin-top: 1rem;">
+  <h2>📋 Notes d'entretiens</h2>
+  <div id="entretiens-container"></div>
+</section>
+  <section id="voeux" class="tab">
+    <div class="voeux-header" style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.3rem; margin-bottom:1rem;">
+      <h2 class="voeux-titre" style="margin:0;">🎓 Mes formations</h2>
+      <span class="voeux-maj" style="white-space:nowrap;">MAJ : 19/08/2026 à 19h15</span>
+    </div>
+    <div id="voeux-container"></div>
+  </section>
+</main>
+  <div id="mentionsModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2>📄 Mentions légales</h2>
+      <p><strong>Éditeur du site</strong><br>
+      <span class="contact-inline">Loris GOUHIER - lorisgouhier@gmail.com</span><br>
+      Site personnel sans but commercial, réalisé à des fins de présentation et de développement web.</p>
+      <p><strong>Hébergeur/Diffusion/Domaine</strong><br>
+      GitHub Inc, 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.<br>
+      Cloudflare Inc, 101 Townsend Street, San Francisco, CA 94107, États-Unis.<br>
+      OVH SAS, 2 Rue Kellermann, 59100 Roubaix, France.</p>
+      <p><strong>Propriété intellectuelle</strong><br>
+      L'ensemble du contenu présent sur ce site (textes, images, codes sources, etc) est la propriété exclusive de Loris GOUHIER.
+      Conformément à l'article L.122-4 du Code de la propriété intellectuelle,
+      toute reproduction, représentation, même partielle est interdite sans autorisation préalable.</p>
+      <p><strong>Données personnelles</strong><br>
+      Ce site ne collecte aucune donnée personnelle ni aucun cookie de suivi.<br>
+      GitHub et Cloudflare peuvent traiter votre adresse IP pour le fonctionnement et la sécurité du site.</p>
+    <p class="maj-line">Site web et mentions légales mis à jour le <b>03/11/2026</b>.</p>
+    </div>
+  </div>
+  <footer>
+    <p>© 2026 | Tous droits réservés | <a onclick="openModal()">Mentions légales</a></p>
+  </footer>
+  <script src="parcoursup.js"></script>
+</body>
+</html>
